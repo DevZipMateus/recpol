@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const CallToAction = () => {
   return (
     <section className="py-16 bg-recpol-blue-dark/5">
@@ -12,12 +14,12 @@ const CallToAction = () => {
             nossos processos de análise e controle de qualidade.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contato" className="btn-primary inline-block">
+            <Link to="/#contato" className="btn-primary inline-block">
               Fale Conosco
-            </a>
-            <a href="/produtos" className="btn-secondary inline-block">
+            </Link>
+            <Link to="/#produtos" className="btn-secondary inline-block">
               Conheça Nossos Produtos
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -6,17 +5,18 @@ import Logo from './header/Logo';
 import MobileMenuButton from './header/MobileMenuButton';
 import DesktopNavigation from './header/DesktopNavigation';
 import MobileMenuPanel from './header/MobileMenuPanel';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const menuItems = [
-    { name: "Home", href: "#home" },
-    { name: "Quem Somos", href: "#quem-somos" },
-    { name: "Serviços", href: "#servicos" },
-    { name: "Produtos", href: "#produtos" },
-    { name: "Contato", href: "#contato" },
+    { name: "Home", href: "/" },
+    { name: "Quem Somos", href: "/#quem-somos" },
+    { name: "Serviços", href: "/#servicos" },
+    { name: "Produtos", href: "/#produtos" },
+    { name: "Contato", href: "/#contato" },
   ];
 
   const toggleMenu = () => {

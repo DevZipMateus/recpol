@@ -2,6 +2,7 @@
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MenuItem } from "./types";
+import { Link } from "react-router-dom";
 
 interface MobileMenuPanelProps {
   isMenuOpen: boolean;
@@ -10,6 +11,28 @@ interface MobileMenuPanelProps {
 }
 
 const MobileMenuPanel = ({ isMenuOpen, onClose, menuItems }: MobileMenuPanelProps) => {
+  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    onClose(); // Close menu first
+    
+    // If it's an anchor link to the current page
+    if (href.startsWith('/#')) {
+      event.preventDefault();
+      const targetId = href.substring(2); // Remove the '/#' part
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      } else {
+        // If the element doesn't exist on this page, navigate to home with the anchor
+        window.location.href = href;
+      }
+    }
+    // For regular links, let the Link component handle it
+  };
+
   return (
     <div 
       className={cn(
@@ -21,11 +44,13 @@ const MobileMenuPanel = ({ isMenuOpen, onClose, menuItems }: MobileMenuPanelProp
       {/* Menu Header */}
       <div className="flex items-center justify-between p-6 border-b">
         <div className="flex items-center">
-          <img 
-            src="/lovable-uploads/29982f69-e139-482d-a25a-7ff76b3bbdf4.png" 
-            alt="Recpol - Reciclagem de Polímeros" 
-            className="h-10 w-auto"
-          />
+          <Link to="/">
+            <img 
+              src="/lovable-uploads/29982f69-e139-482d-a25a-7ff76b3bbdf4.png" 
+              alt="Recpol - Reciclagem de Polímeros" 
+              className="h-10 w-auto"
+            />
+          </Link>
         </div>
         <button 
           onClick={onClose}
@@ -41,14 +66,25 @@ const MobileMenuPanel = ({ isMenuOpen, onClose, menuItems }: MobileMenuPanelProp
         <ul className="space-y-5">
           {menuItems.map((item) => (
             <li key={item.name}>
-              <a
-                href={item.href}
-                className="text-xl font-medium text-recpol-blue-dark hover:text-recpol-green transition-all duration-200 block py-2 
-                           hover:translate-x-1 hover:scale-[1.02] focus:outline-none focus:text-recpol-blue-dark"
-                onClick={onClose}
-              >
-                {item.name}
-              </a>
+              {item.href.startsWith('/#') ? (
+                <Link
+                  to={item.href.replace('/#', '#')}
+                  className="text-xl font-medium text-recpol-blue-dark hover:text-recpol-green transition-all duration-200 block py-2 
+                             hover:translate-x-1 hover:scale-[1.02] focus:outline-none focus:text-recpol-blue-dark"
+                  onClick={(e) => handleAnchorClick(e, item.href)}
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <Link
+                  to={item.href}
+                  className="text-xl font-medium text-recpol-blue-dark hover:text-recpol-green transition-all duration-200 block py-2 
+                             hover:translate-x-1 hover:scale-[1.02] focus:outline-none focus:text-recpol-blue-dark"
+                  onClick={onClose}
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

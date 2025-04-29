@@ -1,5 +1,6 @@
 
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 interface LogoProps {
   scrolled: boolean;
@@ -7,7 +8,7 @@ interface LogoProps {
 
 const Logo = ({ scrolled }: LogoProps) => {
   return (
-    <a href="#home" className="flex items-center z-10 relative">
+    <Link to="/" className="flex items-center z-10 relative">
       <img 
         src="/lovable-uploads/808f7fc8-280a-4cfd-b75d-36bc39bdd105.png" 
         alt="Recpol - Reciclagem de Polímeros" 
@@ -17,7 +18,7 @@ const Logo = ({ scrolled }: LogoProps) => {
           "hover:scale-105"
         )}
       />
-    </a>
+    </Link>
   );
 };
 
