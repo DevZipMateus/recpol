@@ -14,7 +14,7 @@ const products = [
     name: 'PA 6 Liso',
     fullName: 'Poliamida 6 Liso (Nylon)',
     description: 'Poliamida 6 sem carga, utilizada em diversas aplicações industriais.',
-    image: '/lovable-uploads/PA 6 LISO (Nylon).jpeg',
+    image: '/lovable-uploads/PA%206%20LISO%20(Nylon).jpeg',
     detailedDescription: 'Detalhes completos sobre o produto PA 6 Liso serão adicionados aqui.',
     applications: ['Peças mecânicas', 'Componentes elétricos', 'Engrenagens'],
     properties: ['Alta resistência mecânica', 'Boa resistência a impactos', 'Resistência à abrasão']
@@ -24,7 +24,7 @@ const products = [
     name: 'PA6.6 com 30% FV',
     fullName: 'Poliamida 6.6 com 30% Fibra de Vidro',
     description: 'Poliamida 6.6 reforçada com 30% de fibra de vidro, proporcionando maior resistência mecânica.',
-    image: '/lovable-uploads/PA6.6 com 30% FV (Nylon).jpeg',
+    image: '/lovable-uploads/PA6.6%20com%2030%25%20FV%20(Nylon).jpeg',
     detailedDescription: 'Detalhes completos sobre o produto PA6.6 com 30% de fibra de vidro serão adicionados aqui.',
     applications: ['Componentes automotivos', 'Peças de engenharia', 'Sistemas elétricos'],
     properties: ['Elevada rigidez', 'Estabilidade dimensional', 'Resistência a altas temperaturas']

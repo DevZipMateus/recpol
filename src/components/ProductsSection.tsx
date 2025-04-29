@@ -7,13 +7,13 @@ const ProductsSection = () => {
       id: "pa6-liso",
       name: 'PA 6 Liso',
       description: 'Poliamida 6 sem carga, utilizada em diversas aplicações industriais.',
-      image: '/lovable-uploads/PA 6 LISO (Nylon).jpeg'
+      image: '/lovable-uploads/PA%206%20LISO%20(Nylon).jpeg'
     },
     {
       id: "pa66-fv30",
       name: 'PA6.6 com 30% FV',
       description: 'Poliamida 6.6 reforçada com 30% de fibra de vidro, proporcionando maior resistência mecânica.',
-      image: '/lovable-uploads/PA6.6 com 30% FV (Nylon).jpeg'
+      image: '/lovable-uploads/PA6.6%20com%2030%25%20FV%20(Nylon).jpeg'
     },
     {
       id: "santoprene",
