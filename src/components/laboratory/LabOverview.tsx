@@ -1,13 +1,11 @@
-
 import { FlaskConical, BadgeCheck, TestTube } from "lucide-react";
-
 type LabOverviewProps = {
   imageSrc: string;
 };
-
-const LabOverview = ({ imageSrc }: LabOverviewProps) => {
-  return (
-    <section className="py-16 bg-white">
+const LabOverview = ({
+  imageSrc
+}: LabOverviewProps) => {
+  return <section className="bg-white py-[30px]">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -57,16 +55,10 @@ const LabOverview = ({ imageSrc }: LabOverviewProps) => {
           </div>
           
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src={imageSrc}
-              alt="Laboratório Recpol" 
-              className="w-full h-[400px] object-cover"
-            />
+            <img src={imageSrc} alt="Laboratório Recpol" className="w-full h-[400px] object-cover" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LabOverview;
