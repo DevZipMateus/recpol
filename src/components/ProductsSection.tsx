@@ -26,12 +26,6 @@ const ProductsSection = () => {
       name: 'ABS',
       description: 'Acrilonitrila Butadieno Estireno, conhecido por sua resistência e rigidez.',
       image: '/lovable-uploads/ABS.jpg'
-    },
-    {
-      id: "retaprene",
-      name: 'Retaprene Poliuretanos',
-      description: 'Polímeros versáteis com excelentes propriedades mecânicas e de resistência química.',
-      image: 'https://images.unsplash.com/photo-1611284446314-60a58ac0dae9?q=80&w=1170&auto=format&fit=crop'
     }
   ];
 

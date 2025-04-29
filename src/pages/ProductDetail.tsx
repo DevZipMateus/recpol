@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
@@ -48,16 +47,6 @@ const products = [
     detailedDescription: 'Detalhes completos sobre o produto ABS serão adicionados aqui.',
     applications: ['Carcaças de equipamentos', 'Peças de automóveis', 'Componentes eletrônicos'],
     properties: ['Bom acabamento superficial', 'Rigidez', 'Facilidade de processamento']
-  },
-  {
-    id: "retaprene",
-    name: 'Retaprene Poliuretanos',
-    fullName: 'Retaprene - Poliuretanos Termoplásticos',
-    description: 'Polímeros versáteis com excelentes propriedades mecânicas e de resistência química.',
-    image: 'https://images.unsplash.com/photo-1611284446314-60a58ac0dae9?q=80&w=1170&auto=format&fit=crop',
-    detailedDescription: 'Detalhes completos sobre o produto Retaprene Poliuretanos serão adicionados aqui.',
-    applications: ['Calçados', 'Revestimentos', 'Adesivos'],
-    properties: ['Alta elasticidade', 'Resistência à abrasão', 'Boa adesão']
   }
 ];
 
