@@ -1,73 +1,67 @@
 
-import { Calculator, BarChart3, FileText, Users, PieChart, Building } from 'lucide-react';
-import ServiceCard from './ServiceCard';
-import AnimatedSection from './AnimatedSection';
+import { Recycle, Truck, FileSearch, Building, Database, HardDrive } from 'lucide-react';
+import ServiceCard from './cards/ServiceCard';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Calculator,
-      title: 'Contabilidade',
-      description: 'Serviços completos de contabilidade para empresas de todos os portes, com demonstrativos claros e precisos.'
+      icon: Recycle,
+      title: 'Gerenciamento de Resíduos',
+      description: 'Planejamento e gestão, classificação e caracterização, mão de obra especializada, coleta seletiva, locação de equipamentos.'
     },
     {
-      icon: BarChart3,
-      title: 'Fiscal',
-      description: 'Gerenciamento de obrigações fiscais, apuração de impostos e planejamento tributário para otimizar a carga fiscal.'
+      icon: Truck,
+      title: 'Coleta e Transporte',
+      description: 'Realiza a coleta e transporte de resíduos de acordo com as normas de segurança ISO14001, utilizando transporte próprio.'
     },
     {
-      icon: FileText,
-      title: 'Departamento Pessoal',
-      description: 'Gestão completa da folha de pagamento, admissões, demissões e todas as rotinas trabalhistas.'
+      icon: FileSearch,
+      title: 'Classificação e Caracterização',
+      description: 'Identificação e classificação dos resíduos conforme normas ABNT e legislação ambiental vigente.'
     },
     {
       icon: Building,
-      title: 'Abertura de Empresa',
-      description: 'Auxílio completo na abertura, alteração ou encerramento de empresas, com agilidade e segurança.'
+      title: 'Logística Interna e Externa',
+      description: 'Gestão completa do fluxo de materiais dentro e fora das instalações do cliente, otimizando processos.'
     },
     {
-      icon: PieChart,
-      title: 'Consultoria Empresarial',
-      description: 'Análise financeira, planejamento estratégico e apoio na tomada de decisões para o crescimento do seu negócio.'
+      icon: Database,
+      title: 'Mão de Obra Especializada',
+      description: 'Equipe técnica qualificada para manejo, triagem e separação de resíduos industriais.'
     },
     {
-      icon: Users,
-      title: 'Societário',
-      description: 'Elaboração e alteração de contratos sociais, atas e documentos societários conforme a legislação vigente.'
+      icon: HardDrive,
+      title: 'Frotas e Equipamentos',
+      description: 'Frota própria e equipamentos modernos destinados à coleta, triagem e transporte de resíduos.'
     }
   ];
 
   return (
-    <section id="serviços" className="py-24 bg-gradient-to-b from-blue-50 to-white">
+    <section id="servicos" className="py-24 bg-gray-50" aria-labelledby="services-heading">
       <div className="section-container">
-        <AnimatedSection>
-          <h2 className="section-title">Nossos Serviços</h2>
+        <div className="text-center mb-12">
+          <h2 id="services-heading" className="section-title">Nossos Serviços</h2>
           <p className="section-subtitle">
-            Oferecemos soluções completas para atender todas as necessidades da sua empresa
+            Soluções completas para gestão de resíduos industriais com foco em sustentabilidade
           </p>
-        </AnimatedSection>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <AnimatedSection 
-              key={service.title} 
-              animation="fade-in-up" 
-              delay={index * 100}
-            >
-              <ServiceCard 
-                icon={service.icon} 
-                title={service.title} 
-                description={service.description} 
-              />
-            </AnimatedSection>
+            <ServiceCard
+              key={index}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
           ))}
         </div>
 
-        <AnimatedSection className="text-center mt-16">
+        <div className="text-center mt-16">
           <a href="#contato" className="btn-primary inline-block">
-            Solicite um orçamento
+            Solicite um Orçamento
           </a>
-        </AnimatedSection>
+        </div>
       </div>
     </section>
   );

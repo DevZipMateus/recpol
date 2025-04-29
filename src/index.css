@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -16,17 +16,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary color (60%) */
-    --primary: 215 60% 45%;
+    /* Primary color (azul escuro do logo) */
+    --primary: 199 60% 29%;
     --primary-foreground: 210 40% 98%;
 
-    /* Secondary color (30%) */
-    --secondary: 200 30% 80%;
+    /* Secondary color (azul claro do logo) */
+    --secondary: 193 40% 52%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    /* Accent color (10%) */
-    --accent: 25 100% 55%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent color (verde do logo) */
+    --accent: 80 55% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -54,6 +54,7 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
 
   html {
@@ -62,18 +63,8 @@
 }
 
 @layer components {
-  .hero-gradient {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
-    backdrop-filter: blur(8px);
-  }
-
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-md;
-  }
-
-  /* Reduced vertical spacing */
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
   }
 
   .section-title {
@@ -82,7 +73,7 @@
 
   .section-title::after {
     content: "";
-    @apply absolute w-20 h-1 bg-primary left-1/2 -translate-x-1/2 bottom-0 mt-4;
+    @apply absolute w-20 h-1 bg-recpol-green left-1/2 -translate-x-1/2 bottom-0 mt-4;
     bottom: -0.75rem;
   }
 
@@ -91,25 +82,37 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-white rounded-md font-medium transition-all duration-200 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+    @apply px-6 py-3 bg-recpol-blue-dark text-white rounded-md font-medium transition-all duration-200 
+    hover:bg-recpol-blue-dark/90 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 
+    focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark/50 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-primary rounded-md font-medium transition-all duration-200 hover:bg-gray-50 border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+    @apply px-6 py-3 bg-recpol-blue-light text-white rounded-md font-medium transition-all duration-200 
+    hover:bg-recpol-blue-light/90 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 
+    focus:outline-none focus:ring-2 focus:ring-recpol-blue-light/50 focus:ring-offset-2;
   }
 
   .btn-accent {
-    @apply px-6 py-3 bg-accent text-white rounded-md font-medium transition-all duration-200 hover:bg-accent/90 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2;
+    @apply px-6 py-3 bg-recpol-green text-white rounded-md font-medium transition-all duration-200 
+    hover:bg-recpol-green/90 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 
+    focus:outline-none focus:ring-2 focus:ring-recpol-green/50 focus:ring-offset-2;
   }
 
-  .animate-when-visible {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-gray-100 shadow-md rounded-lg;
   }
+}
 
-  .is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Utilities para otimização de SEO */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

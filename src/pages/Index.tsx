@@ -4,14 +4,14 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
-import PlansSection from '@/components/PlansSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
+import ProductsSection from '@/components/ProductsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll implementation with reduced offset for tighter sections
+    // Implementação de rolagem suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -23,13 +23,13 @@ const Index = () => {
         if (!targetElement) return;
 
         window.scrollTo({
-          top: targetElement.offsetTop - 70, // Reduced offset for tighter layout
+          top: targetElement.offsetTop - 70,
           behavior: 'smooth'
         });
       });
     });
 
-    // Clean up event listeners
+    // Limpeza dos event listeners
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', function (e) {
@@ -46,11 +46,11 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <PlansSection />
-        <TestimonialsSection />
+        <ProductsSection />
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

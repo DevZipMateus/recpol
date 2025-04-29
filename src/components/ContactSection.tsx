@@ -1,69 +1,141 @@
 
-import { Mail, Phone, MapPin } from 'lucide-react';
-import AnimatedSection from './AnimatedSection';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const ContactSection = () => {
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: 'Telefone',
+      details: [
+        '(11) 4055-1340',
+        '(11) 94744-2886 (WhatsApp)'
+      ]
+    },
+    {
+      icon: Mail,
+      title: 'E-mail',
+      details: [
+        'edceia@recpol.ind.br'
+      ]
+    },
+    {
+      icon: MapPin,
+      title: 'Endereço',
+      details: [
+        'Av. Marginal ao Córrego da Serraria, 209',
+        'Conceição, Diadema - SP',
+        'CEP 09980-390'
+      ]
+    },
+    {
+      icon: Clock,
+      title: 'Horário de Funcionamento',
+      details: [
+        'Segunda a Sexta: 07:30 às 17:30'
+      ]
+    }
+  ];
+
   return (
-    <section id="contato" className="py-16 bg-gradient-to-b from-secondary/30 to-white">
+    <section id="contato" className="py-24 bg-gray-50" aria-labelledby="contact-heading">
       <div className="section-container">
-        <AnimatedSection>
-          <h2 className="section-title">Entre em Contato</h2>
+        <div className="text-center mb-12">
+          <h2 id="contact-heading" className="section-title">Entre em Contato</h2>
           <p className="section-subtitle">
             Estamos prontos para atender suas necessidades e responder suas dúvidas
           </p>
-        </AnimatedSection>
+        </div>
 
-        <div className="mt-8">
-          <AnimatedSection animation="slide-in-left">
-            <div className="glass-card rounded-xl p-6 sm:p-8 border-secondary/20">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-primary">Informações de Contato</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Formulário */}
+          <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+            <h3 className="text-xl font-bold mb-6 text-recpol-blue-dark">Envie uma Mensagem</h3>
+            
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
+                  placeholder="Seu nome"
+                />
+              </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Telefone */}
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Phone className="h-5 w-5 text-primary" />
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
+                  placeholder="seu.email@exemplo.com"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
+                  placeholder="Assunto da mensagem"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                <textarea 
+                  id="message" 
+                  rows={4} 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
+                  placeholder="Digite sua mensagem aqui..."
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit" 
+                className="w-full btn-primary"
+              >
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+          
+          {/* Informações de contato */}
+          <div className="space-y-6">
+            {contactInfo.map((item, index) => (
+              <div 
+                key={index} 
+                className="bg-white p-5 rounded-xl shadow-md border border-gray-100"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-recpol-blue-dark/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-6 w-6 text-recpol-blue-dark" />
                   </div>
-                  <div className="ml-3">
-                    <h4 className="text-base font-medium">Telefone</h4>
-                    <p className="text-sm text-gray-600">(11) 5555-5555</p>
-                    <p className="text-sm text-gray-600">(11) 98765-4321</p>
-                  </div>
-                </div>
-                
-                {/* E-mail */}
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="text-base font-medium">E-mail</h4>
-                    <p className="text-sm text-gray-600 break-words">contato@contabilify.com.br</p>
-                    <p className="text-sm text-gray-600 break-words">atendimento@contabilify.com.br</p>
-                  </div>
-                </div>
-                
-                {/* Endereço */}
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="text-base font-medium">Endereço</h4>
-                    <p className="text-sm text-gray-600">Av. Paulista, 1000 - Bela Vista</p>
-                    <p className="text-sm text-gray-600">São Paulo - SP, 01310-000</p>
+                  <div>
+                    <h4 className="text-lg font-medium text-recpol-blue-dark">{item.title}</h4>
+                    {item.details.map((detail, i) => (
+                      <p key={i} className="text-gray-700">{detail}</p>
+                    ))}
                   </div>
                 </div>
               </div>
-              
-              <div className="mt-6 p-4 bg-secondary/20 rounded-lg">
-                <h4 className="text-lg font-medium mb-2">Horário de Atendimento</h4>
-                <p className="text-gray-600 text-sm">Segunda a Sexta: 9h às 18h</p>
-                <p className="text-gray-600 text-sm">Sábados: 9h às 13h</p>
-              </div>
+            ))}
+
+            {/* Mapa */}
+            <div className="bg-white p-1 rounded-xl shadow-md border border-gray-100 overflow-hidden h-[250px]">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8879006386387!2d-46.609726!3d-23.6544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4308e824208d%3A0x4388cba8d1e09b82!2sAv.%20Marginal%20ao%20C%C3%B3rrego%20da%20Serraria%2C%20209%20-%20Concei%C3%A7%C3%A3o%2C%20Diadema%20-%20SP%2C%2009980-390!5e0!3m2!1spt-BR!2sbr!4v1619550000000!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={false} 
+                loading="lazy"
+                title="Localização da Recpol"
+              ></iframe>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </div>
     </section>
