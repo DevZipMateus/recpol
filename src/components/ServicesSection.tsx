@@ -1,6 +1,7 @@
 
-import { Recycle, Truck, FileSearch, Building, Database, HardDrive } from 'lucide-react';
+import { Recycle, Truck, FileSearch, Building, Database, HardDrive, Flask } from 'lucide-react';
 import ServiceCard from './cards/ServiceCard';
+import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
   const services = [
@@ -58,9 +59,18 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <a href="#contato" className="btn-primary inline-block">
-            Solicite um Orçamento
-          </a>
+          <div className="flex flex-col md:flex-row justify-center gap-4 items-center">
+            <a href="#contato" className="btn-primary inline-block mb-4 md:mb-0">
+              Solicite um Orçamento
+            </a>
+            <Link 
+              to="/laboratorio" 
+              className="btn-secondary inline-flex items-center gap-2"
+            >
+              <Flask className="h-5 w-5" />
+              Conheça Nosso Laboratório
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -1,16 +1,42 @@
 
-import { FlaskConical, BadgeCheck, TestTube } from "lucide-react";
+import { FlaskConical, BadgeCheck, TestTube, Flask } from "lucide-react";
+import { useEffect, useRef } from "react";
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Laboratory = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Video autoplay was prevented:", error);
+      });
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-b from-recpol-blue-dark/95 to-recpol-blue-dark/85 text-white">
-          <div className="section-container py-20">
-            <div className="text-center mb-8">
+      <Header />
+      <main className="flex-grow pt-20">
+        {/* Hero Video Section */}
+        <section className="relative w-full h-[70vh] overflow-hidden">
+          <video
+            ref={videoRef}
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/lovable-uploads/videolab.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos HTML5.
+          </video>
+          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <div className="text-center text-white p-6 max-w-4xl">
               <h1 className="text-4xl sm:text-5xl font-bold mb-4">Laboratório Recpol</h1>
-              <p className="text-xl max-w-3xl mx-auto text-white/90">
+              <p className="text-xl max-w-3xl mx-auto">
                 Excelência e inovação em análise e controle de qualidade de polímeros
               </p>
             </div>
@@ -58,7 +84,7 @@ const Laboratory = () => {
                   </div>
                   
                   <div className="flex items-start gap-3 p-4 rounded-lg border border-gray-200 bg-white shadow-sm">
-                    <FlaskConical className="h-6 w-6 text-recpol-green mt-1 flex-shrink-0" />
+                    <Flask className="h-6 w-6 text-recpol-green mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-lg text-recpol-blue-dark">Desenvolvimento</h3>
                       <p className="text-gray-600 text-sm">Pesquisa e criação de soluções personalizadas</p>
@@ -67,14 +93,12 @@ const Laboratory = () => {
                 </div>
               </div>
               
-              <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 h-[400px] flex items-center justify-center">
-                <p className="text-gray-500 italic">Imagem do Laboratório Recpol</p>
-                {/* Placeholder for laboratory image */}
-                {/* <img 
-                  src="/path-to-lab-image.jpg" 
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/2774020419465373.jpeg" 
                   alt="Laboratório Recpol" 
-                  className="w-full h-full object-cover"
-                /> */}
+                  className="w-full h-[400px] object-cover"
+                />
               </div>
             </div>
           </div>
@@ -100,14 +124,12 @@ const Laboratory = () => {
                   Certificação internacional que reconhece nosso Sistema de Gestão da Qualidade, 
                   garantindo processos padronizados e produtos de alta qualidade.
                 </p>
-                <div className="mt-auto rounded-lg border border-gray-300 w-full h-48 flex items-center justify-center">
-                  <p className="text-gray-500 italic">Certificado ISO 9001</p>
-                  {/* Placeholder for ISO 9001 certificate image */}
-                  {/* <img 
-                    src="/path-to-iso9001.jpg" 
+                <div className="mt-auto rounded-lg border border-gray-300 w-full h-48 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/1982259855642966.jpeg" 
                     alt="Certificado ISO 9001" 
                     className="w-full h-full object-contain p-4"
-                  /> */}
+                  />
                 </div>
               </div>
               
@@ -120,14 +142,12 @@ const Laboratory = () => {
                   Certificação que atesta nosso Sistema de Gestão Ambiental, demonstrando nosso 
                   compromisso com práticas sustentáveis e minimização do impacto ambiental.
                 </p>
-                <div className="mt-auto rounded-lg border border-gray-300 w-full h-48 flex items-center justify-center">
-                  <p className="text-gray-500 italic">Certificado ISO 14001</p>
-                  {/* Placeholder for ISO 14001 certificate image */}
-                  {/* <img 
-                    src="/path-to-iso14001.jpg" 
+                <div className="mt-auto rounded-lg border border-gray-300 w-full h-48 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/697592469479203.jpeg" 
                     alt="Certificado ISO 14001" 
                     className="w-full h-full object-contain p-4"
-                  /> */}
+                  />
                 </div>
               </div>
             </div>
@@ -145,37 +165,65 @@ const Laboratory = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Placeholders for laboratory images - to be replaced with actual images */}
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div 
-                  key={item} 
-                  className="bg-gray-100 rounded-lg overflow-hidden h-64 flex items-center justify-center shadow-md"
-                >
-                  <p className="text-gray-500 italic">Imagem do Laboratório {item}</p>
-                  {/* <img 
-                    src={`/path-to-lab-image-${item}.jpg`} 
-                    alt={`Laboratório Recpol ${item}`} 
-                    className="w-full h-full object-cover"
-                  /> */}
-                </div>
-              ))}
+              <div className="bg-gray-100 rounded-lg overflow-hidden h-64 shadow-md">
+                <img 
+                  src="/lovable-uploads/668391002837626.jpeg" 
+                  alt="Laboratório Recpol" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-gray-100 rounded-lg overflow-hidden h-64 shadow-md">
+                <img 
+                  src="/lovable-uploads/1221236622680505.jpeg" 
+                  alt="Laboratório Recpol" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-gray-100 rounded-lg overflow-hidden h-64 shadow-md">
+                <img 
+                  src="/lovable-uploads/10034708336581978.jpeg" 
+                  alt="Laboratório Recpol" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-gray-100 rounded-lg overflow-hidden h-64 shadow-md">
+                <img 
+                  src="/lovable-uploads/1783739858916616.jpeg" 
+                  alt="Laboratório Recpol" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-gray-100 rounded-lg overflow-hidden h-64 shadow-md">
+                <img 
+                  src="/lovable-uploads/1651077705546971.jpeg" 
+                  alt="Laboratório Recpol" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             
             <div className="mt-16">
               <h3 className="text-2xl font-bold text-center mb-8">Vídeos do Nosso Laboratório</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Placeholders for laboratory videos - to be replaced with actual video embeds */}
-                {[1, 2].map((item) => (
-                  <div 
-                    key={item} 
-                    className="bg-gray-100 rounded-lg overflow-hidden aspect-video flex items-center justify-center shadow-md"
+                <div className="bg-gray-100 rounded-lg overflow-hidden aspect-video shadow-md">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
                   >
-                    <p className="text-gray-500 italic">Vídeo do Laboratório {item}</p>
-                    {/* Video embed code will go here */}
-                    {/* For example: <iframe src="https://www.youtube.com/embed/VIDEO_ID" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-                  </div>
-                ))}
+                    <source src="/lovable-uploads/analisadordeunidade.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos HTML5.
+                  </video>
+                </div>
+                <div className="bg-gray-100 rounded-lg overflow-hidden aspect-video shadow-md">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/lovable-uploads/574513425130506.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos HTML5.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -204,6 +252,8 @@ const Laboratory = () => {
           </div>
         </section>
       </main>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
