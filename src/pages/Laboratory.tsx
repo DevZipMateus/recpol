@@ -1,5 +1,4 @@
-
-import { FlaskConical, BadgeCheck, TestTube, Flask } from "lucide-react";
+import { FlaskConical, BadgeCheck, TestTube } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -84,7 +83,7 @@ const Laboratory = () => {
                   </div>
                   
                   <div className="flex items-start gap-3 p-4 rounded-lg border border-gray-200 bg-white shadow-sm">
-                    <Flask className="h-6 w-6 text-recpol-green mt-1 flex-shrink-0" />
+                    <FlaskConical className="h-6 w-6 text-recpol-green mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-lg text-recpol-blue-dark">Desenvolvimento</h3>
                       <p className="text-gray-600 text-sm">Pesquisa e criação de soluções personalizadas</p>

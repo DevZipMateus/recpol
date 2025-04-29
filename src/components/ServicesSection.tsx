@@ -1,5 +1,5 @@
 
-import { Recycle, Truck, FileSearch, Building, Database, HardDrive, Flask } from 'lucide-react';
+import { Recycle, Truck, FileSearch, Building, Database, HardDrive, FlaskConical } from 'lucide-react';
 import ServiceCard from './cards/ServiceCard';
 import { Link } from 'react-router-dom';
 
@@ -67,7 +67,7 @@ const ServicesSection = () => {
               to="/laboratorio" 
               className="btn-secondary inline-flex items-center gap-2"
             >
-              <Flask className="h-5 w-5" />
+              <FlaskConical className="h-5 w-5" />
               Conheça Nosso Laboratório
             </Link>
           </div>
