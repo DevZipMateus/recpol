@@ -1,18 +1,7 @@
-
 import { CheckCircle } from 'lucide-react';
-
 const AboutSection = () => {
-  const features = [
-    'Especialistas em gestão de resíduos industriais',
-    'Conformidade com normas ambientais',
-    'Soluções sustentáveis',
-    'Equipe técnica especializada',
-    'Tecnologia avançada',
-    'Logística integrada'
-  ];
-
-  return (
-    <section id="quem-somos" className="py-24 bg-white" aria-labelledby="about-heading">
+  const features = ['Especialistas em gestão de resíduos industriais', 'Conformidade com normas ambientais', 'Soluções sustentáveis', 'Equipe técnica especializada', 'Tecnologia avançada', 'Logística integrada'];
+  return <section id="quem-somos" className="py-24 bg-white" aria-labelledby="about-heading">
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 id="about-heading" className="section-title">Quem Somos</h2>
@@ -24,12 +13,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1170&auto=format&fit=crop" 
-                alt="Recpol - Compromisso com a sustentabilidade" 
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
+              <img alt="Recpol - Compromisso com a sustentabilidade" className="w-full h-auto object-cover" loading="lazy" src="/lovable-uploads/eac15d20-e636-45f9-ac23-37b89fe622a4.jpg" />
             </div>
             
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-recpol-blue-light/10 rounded-full z-0"></div>
@@ -53,12 +37,10 @@ const AboutSection = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-              {features.map((feature) => (
-                <div key={feature} className="flex items-center gap-2">
+              {features.map(feature => <div key={feature} className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             <a href="#servicos" className="btn-primary inline-block mt-4">
@@ -67,8 +49,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
