@@ -1,3 +1,4 @@
+
 import { FlaskConical, BadgeCheck, TestTube } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Header from '@/components/Header';
@@ -123,12 +124,22 @@ const Laboratory = () => {
                   Certificação internacional que reconhece nosso Sistema de Gestão da Qualidade, 
                   garantindo processos padronizados e produtos de alta qualidade.
                 </p>
-                <div className="mt-auto rounded-lg border border-gray-300 w-full h-48 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/1982259855642966.jpeg" 
-                    alt="Certificado ISO 9001" 
-                    className="w-full h-full object-contain p-4"
+                <div className="mt-auto w-full h-[500px] bg-gray-100 rounded-lg border border-gray-300 overflow-hidden">
+                  <iframe 
+                    src="/lovable-uploads/ISO 9001:2015.pdf"
+                    className="w-full h-full"
+                    title="ISO 9001:2015 Certification"
                   />
+                  <div className="mt-4 flex justify-center">
+                    <a 
+                      href="/lovable-uploads/ISO 9001:2015.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-secondary inline-flex items-center gap-2"
+                    >
+                      Ver em tela cheia
+                    </a>
+                  </div>
                 </div>
               </div>
               
@@ -141,12 +152,22 @@ const Laboratory = () => {
                   Certificação que atesta nosso Sistema de Gestão Ambiental, demonstrando nosso 
                   compromisso com práticas sustentáveis e minimização do impacto ambiental.
                 </p>
-                <div className="mt-auto rounded-lg border border-gray-300 w-full h-48 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/697592469479203.jpeg" 
-                    alt="Certificado ISO 14001" 
-                    className="w-full h-full object-contain p-4"
+                <div className="mt-auto w-full h-[500px] bg-gray-100 rounded-lg border border-gray-300 overflow-hidden">
+                  <iframe 
+                    src="/lovable-uploads/ISO 14001:2015.pdf"
+                    className="w-full h-full"
+                    title="ISO 14001:2015 Certification"
                   />
+                  <div className="mt-4 flex justify-center">
+                    <a 
+                      href="/lovable-uploads/ISO 14001:2015.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-secondary inline-flex items-center gap-2"
+                    >
+                      Ver em tela cheia
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
