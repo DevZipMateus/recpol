@@ -65,10 +65,17 @@ const ServicesSection = () => {
             </a>
             <Link 
               to="/laboratorio" 
-              className="btn-secondary inline-flex items-center gap-2"
+              className="btn-secondary inline-flex items-center gap-2 mb-4 md:mb-0"
             >
               <FlaskConical className="h-5 w-5" />
               Conheça Nosso Laboratório
+            </Link>
+            <Link 
+              to="/frota" 
+              className="btn-accent inline-flex items-center gap-2"
+            >
+              <Truck className="h-5 w-5" />
+              Conheça Nossa Frota
             </Link>
           </div>
         </div>
