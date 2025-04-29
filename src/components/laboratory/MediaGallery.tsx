@@ -1,4 +1,3 @@
-
 type ImageGalleryProps = {
   images: string[];
 }
@@ -43,7 +42,6 @@ const VideoGallery = ({ videos }: VideoGalleryProps) => {
 
 const MediaGallery = () => {
   const images = [
-    "/lovable-uploads/668391002837626.jpeg",
     "/lovable-uploads/1221236622680505.jpeg",
     "/lovable-uploads/10034708336581978.jpeg",
     "/lovable-uploads/1783739858916616.jpeg",
