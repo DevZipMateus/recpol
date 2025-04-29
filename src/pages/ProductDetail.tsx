@@ -1,3 +1,4 @@
+
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
@@ -14,7 +15,21 @@ const products = [
     fullName: 'Poliamida 6 Liso (Nylon)',
     description: 'Poliamida 6 sem carga, utilizada em diversas aplicações industriais.',
     image: '/lovable-uploads/PA%206%20LISO%20(Nylon).jpeg',
-    detailedDescription: 'Detalhes completos sobre o produto PA 6 Liso serão adicionados aqui.',
+    detailedDescription: 'O PA 6 Liso (Nylon) é uma poliamida de alta performance, conhecida por sua excelente combinação de resistência, flexibilidade e baixo coeficiente de atrito. Este material versátil é amplamente utilizado na fabricação de peças plásticas técnicas, especialmente em indústrias como automotiva, eletroeletrônica e de bens de consumo. Com características superiores em termos de resistência mecânica e durabilidade, o PA 6 Liso é ideal para peças que exigem alta performance e resistência ao desgaste.',
+    characteristics: [
+      'Composição: Poliamida 6, também conhecida como Nylon.',
+      'Alta resistência mecânica: Excelente resistência à tração e compressão, tornando-o ideal para peças que suportam cargas e tensões.',
+      'Durabilidade: Alta resistência ao desgaste e abrasão, garantindo maior vida útil para as peças fabricadas.',
+      'Flexibilidade: Boa resistência à flexão e ao impacto, mesmo em temperaturas baixas.',
+      'Baixo coeficiente de atrito: Ideal para peças que exigem baixo atrito, como engrenagens e buchas.'
+    ],
+    benefits: [
+      'Resistência superior: Ideal para aplicações que exigem alta resistência mecânica e abrasiva.',
+      'Versatilidade: Pode ser utilizado em uma vasta gama de aplicações, como componentes automotivos, peças elétricas, e utensílios domésticos.',
+      'Desempenho confiável: Oferece um bom desempenho em ambientes agressivos, mantendo suas propriedades ao longo do tempo.',
+      'Facilidade de processamento: O PA 6 Liso (Nylon) pode ser moldado em diferentes formas e utilizado em várias técnicas de fabricação.'
+    ],
+    conclusion: 'O PA 6 Liso (Nylon) é a escolha perfeita para quem precisa de um material de alta qualidade, durável e de fácil processamento, oferecendo um excelente custo-benefício em diversas aplicações industriais.',
     applications: ['Peças mecânicas', 'Componentes elétricos', 'Engrenagens'],
     properties: ['Alta resistência mecânica', 'Boa resistência a impactos', 'Resistência à abrasão']
   },
@@ -24,7 +39,20 @@ const products = [
     fullName: 'Poliamida 6.6 com 30% Fibra de Vidro',
     description: 'Poliamida 6.6 reforçada com 30% de fibra de vidro, proporcionando maior resistência mecânica.',
     image: '/lovable-uploads/PA6.6%20com%2030%25%20FV%20(Nylon).jpeg',
-    detailedDescription: 'Detalhes completos sobre o produto PA6.6 com 30% de fibra de vidro serão adicionados aqui.',
+    detailedDescription: 'O PA 6.6 com 30% FV é uma poliamida de alta performance, reforçada com 30% de fibras de vidro, ideal para aplicações que exigem resistência mecânica superior e estabilidade dimensional. Este material oferece uma excelente combinação de dureza, resistência ao desgaste e à abrasão, sendo amplamente utilizado em indústrias automotiva, elétrica e de engenharia para a produção de peças estruturais, componentes de motores e sistemas de transmissão.',
+    characteristics: [
+      'Composição: Poliamida 6.6 com 30% de fibras de vidro.',
+      'Alta resistência: Excelente resistência à tração e ao impacto, proporcionando maior durabilidade e performance.',
+      'Estabilidade térmica: Suporta altas temperaturas sem comprometer suas propriedades mecânicas.',
+      'Baixo coeficiente de atrito: Ideal para componentes em movimento ou que exigem mínima fricção.',
+      'Aplicações versáteis: Indicado para fabricação de peças técnicas, como engrenagens, suportes, conectores e carcaças.'
+    ],
+    benefits: [
+      'Maior vida útil de componentes mecânicos.',
+      'Redução da necessidade de manutenção devido à resistência superior ao desgaste.',
+      'Ideal para ambientes exigentes, com alta carga térmica e mecânica.'
+    ],
+    conclusion: 'O PA 6.6 com 30% FV é a escolha certa para quem busca qualidade, resistência e eficiência em processos industriais.',
     applications: ['Componentes automotivos', 'Peças de engenharia', 'Sistemas elétricos'],
     properties: ['Elevada rigidez', 'Estabilidade dimensional', 'Resistência a altas temperaturas']
   },
@@ -34,7 +62,27 @@ const products = [
     fullName: 'Santoprene - Termoplástico Vulcanizado',
     description: 'Termoplástico vulcanizado, combina as propriedades da borracha com a processabilidade dos termoplásticos.',
     image: '/lovable-uploads/Santoprene(TPV).jpg',
-    detailedDescription: 'Detalhes completos sobre o produto Santoprene (TPV) serão adicionados aqui.',
+    detailedDescription: 'O Santoprene (TPV) é um elastômero termoplástico altamente versátil, que combina a elasticidade de uma borracha com a processabilidade de um termoplástico. Ele é ideal para uma ampla gama de aplicações industriais, oferecendo excelente resistência a ambientes agressivos, como altas temperaturas, radiação UV e produtos químicos. O Santoprene é amplamente utilizado nas indústrias automotiva, de construção, elétrica e de bens de consumo devido à sua durabilidade, flexibilidade e resistência ao desgaste.',
+    characteristics: [
+      'Composição: Elastômero termoplástico (TPV), misturando borracha e termoplástico para combinar as melhores qualidades de ambos os materiais.',
+      'Resistência: Alta resistência a temperaturas extremas, radiação UV, ozônio e substâncias químicas, garantindo longa durabilidade.',
+      'Flexibilidade e Elasticidade: Excelente capacidade de deformação e recuperação, ideal para peças que exigem alta flexibilidade e resistência ao impacto.',
+      'Processabilidade: Pode ser facilmente moldado por técnicas como injeção e extrusão, permitindo a fabricação de peças com geometria complexa.',
+      'Baixo coeficiente de fricção: Desempenho excepcional em peças móveis e de baixo atrito.'
+    ],
+    benefits: [
+      'Durabilidade superior: Resistência excepcional ao desgaste, calor e intempéries, proporcionando maior vida útil para as peças.',
+      'Versatilidade: Adequado para uma ampla gama de aplicações, desde vedação até componentes estruturais.',
+      'Sustentabilidade: Comparado aos materiais tradicionais de borracha, o Santoprene oferece um menor impacto ambiental devido ao processo de fabricação termoplástico.',
+      'Desempenho confiável: Ideal para condições severas e ambientes agressivos, sem comprometer a performance das peças.'
+    ],
+    specificApplications: [
+      'Indústria Automotiva: Peças para vedação, mangueiras, suportes, gaxetas e componentes internos de veículos.',
+      'Indústria de Construção: Vedações, juntas e vedantes para a construção civil.',
+      'Indústria Elétrica: Componentes para isolamento e vedação elétrica, conectores e interruptores.',
+      'Bens de Consumo: Produtos que exigem flexibilidade e durabilidade, como peças para eletrodomésticos e acessórios.'
+    ],
+    conclusion: 'O Santoprene (TPV) oferece uma solução ideal para quem busca materiais flexíveis, duráveis e com excelente resistência a condições severas, além de garantir desempenho superior em diversas aplicações industriais.',
     applications: ['Vedações', 'Juntas', 'Componentes flexíveis'],
     properties: ['Alta flexibilidade', 'Resistência química', 'Boa vedação']
   },
@@ -44,7 +92,27 @@ const products = [
     fullName: 'Acrilonitrila Butadieno Estireno',
     description: 'Acrilonitrila Butadieno Estireno, conhecido por sua resistência e rigidez.',
     image: '/lovable-uploads/ABS.jpg',
-    detailedDescription: 'Detalhes completos sobre o produto ABS serão adicionados aqui.',
+    detailedDescription: 'O ABS (Acrilonitrila Butadieno Estireno) é um termoplástico amplamente utilizado em diversas indústrias devido às suas excelentes propriedades mecânicas, facilidade de processamento e versatilidade. Esse material combina a rigidez e a resistência química da acrilonitrila, a tenacidade do butadieno e a estabilidade dimensional do estireno, resultando em um plástico de alto desempenho, ideal para uma variedade de aplicações técnicas e de consumo.',
+    characteristics: [
+      'Composição: Acrilonitrila, butadieno e estireno, que conferem ao ABS uma combinação única de resistência, flexibilidade e durabilidade.',
+      'Resistência mecânica: Excelente resistência à tração, impacto e compressão, tornando-o adequado para peças sujeitas a esforços mecânicos.',
+      'Estabilidade térmica: Boa resistência a temperaturas moderadas, mantendo a integridade dimensional e as propriedades mecânicas.',
+      'Facilidade de processamento: O ABS pode ser facilmente moldado por injeção, extrusão e outras técnicas, permitindo a fabricação de peças com formas complexas e alta precisão.',
+      'Boa resistência química: Resistente a ácidos, álcalis e graxas, o que o torna ideal para aplicações em ambientes industriais exigentes.'
+    ],
+    benefits: [
+      'Alta resistência ao impacto: O ABS é ideal para componentes que sofrem impactos frequentes ou estão sujeitos a condições mais rigorosas.',
+      'Versatilidade: Pode ser utilizado em uma ampla gama de aplicações, como peças automotivas, componentes eletrônicos e utensílios domésticos.',
+      'Excelente acabamento superficial: O material permite acabamentos de alta qualidade, o que o torna ideal para aplicações visuais e estéticas.',
+      'Fácil de processar e reciclar: O ABS pode ser facilmente reciclado, proporcionando uma opção sustentável em muitas aplicações industriais.'
+    ],
+    specificApplications: [
+      'Indústria Automotiva: Painéis, peças de interiores, componentes estruturais e suportes.',
+      'Eletrônicos e Eletrodomésticos: Cases de computadores, impressoras, televisores, eletrodomésticos e componentes elétricos.',
+      'Indústria de Brinquedos: Peças de brinquedos, devido à sua resistência e capacidade de moldagem.',
+      'Construção e Engenharia: Tubos, conexões e peças de sistemas de encanamento.'
+    ],
+    conclusion: 'O ABS é uma excelente opção para quem busca um material com alta resistência ao impacto, facilidade de processamento e versatilidade em diversas aplicações, oferecendo excelente custo-benefício e durabilidade.',
     applications: ['Carcaças de equipamentos', 'Peças de automóveis', 'Componentes eletrônicos'],
     properties: ['Bom acabamento superficial', 'Rigidez', 'Facilidade de processamento']
   }
@@ -112,23 +180,66 @@ const ProductDetail = () => {
                     <p className="text-gray-700">{product.detailedDescription}</p>
                   </div>
                   
-                  <div>
-                    <h2 className="text-xl font-semibold mb-3">Aplicações</h2>
-                    <ul className="list-disc pl-5 text-gray-700">
-                      {product.applications.map((app, index) => (
-                        <li key={index}>{app}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  {product.characteristics && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Características principais</h2>
+                      <ul className="list-disc pl-5 text-gray-700">
+                        {product.characteristics.map((characteristic, index) => (
+                          <li key={index} className="mb-2">{characteristic}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
-                  <div>
-                    <h2 className="text-xl font-semibold mb-3">Propriedades</h2>
-                    <ul className="list-disc pl-5 text-gray-700">
-                      {product.properties.map((prop, index) => (
-                        <li key={index}>{prop}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  {product.benefits && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Benefícios</h2>
+                      <ul className="list-disc pl-5 text-gray-700">
+                        {product.benefits.map((benefit, index) => (
+                          <li key={index} className="mb-2">{benefit}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  {product.specificApplications && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Aplicações</h2>
+                      <ul className="list-disc pl-5 text-gray-700">
+                        {product.specificApplications.map((app, index) => (
+                          <li key={index} className="mb-2">{app}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  {!product.specificApplications && product.applications && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Aplicações</h2>
+                      <ul className="list-disc pl-5 text-gray-700">
+                        {product.applications.map((app, index) => (
+                          <li key={index} className="mb-2">{app}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  {product.properties && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Propriedades</h2>
+                      <ul className="list-disc pl-5 text-gray-700">
+                        {product.properties.map((prop, index) => (
+                          <li key={index} className="mb-2">{prop}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  {product.conclusion && (
+                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                      <p className="text-gray-800 italic">{product.conclusion}</p>
+                    </div>
+                  )}
                 </div>
                 
                 <div className="mt-8 space-y-4">
