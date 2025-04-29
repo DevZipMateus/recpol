@@ -4,26 +4,31 @@ import ProductCard from './cards/ProductCard';
 const ProductsSection = () => {
   const products = [
     {
+      id: "pa6-liso",
       name: 'PA 6 Liso',
       description: 'Poliamida 6 sem carga, utilizada em diversas aplicações industriais.',
-      image: 'https://images.unsplash.com/photo-1615800020824-fa26ef169e12?q=80&w=1170&auto=format&fit=crop'
+      image: '/lovable-uploads/PA 6 LISO (Nylon).jpeg'
     },
     {
+      id: "pa66-fv30",
       name: 'PA6.6 com 30% FV',
       description: 'Poliamida 6.6 reforçada com 30% de fibra de vidro, proporcionando maior resistência mecânica.',
-      image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=1168&auto=format&fit=crop'
+      image: '/lovable-uploads/PA6.6 com 30% FV (Nylon).jpeg'
     },
     {
+      id: "santoprene",
       name: 'Santoprene (TPV)',
       description: 'Termoplástico vulcanizado, combina as propriedades da borracha com a processabilidade dos termoplásticos.',
-      image: 'https://images.unsplash.com/photo-1578652520388-c1a2954c6b87?q=80&w=1170&auto=format&fit=crop'
+      image: '/lovable-uploads/Santoprene(TPV).jpg'
     },
     {
+      id: "abs",
       name: 'ABS',
       description: 'Acrilonitrila Butadieno Estireno, conhecido por sua resistência e rigidez.',
-      image: 'https://images.unsplash.com/photo-1602810316693-3667c854239a?q=80&w=1170&auto=format&fit=crop'
+      image: '/lovable-uploads/ABS.jpg'
     },
     {
+      id: "retaprene",
       name: 'Retaprene Poliuretanos',
       description: 'Polímeros versáteis com excelentes propriedades mecânicas e de resistência química.',
       image: 'https://images.unsplash.com/photo-1611284446314-60a58ac0dae9?q=80&w=1170&auto=format&fit=crop'
@@ -44,6 +49,7 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <ProductCard
               key={index}
+              id={product.id}
               name={product.name}
               description={product.description}
               image={product.image}
