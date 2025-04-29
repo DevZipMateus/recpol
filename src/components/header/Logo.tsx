@@ -8,15 +8,15 @@ interface LogoProps {
 const Logo = ({ scrolled }: LogoProps) => {
   return (
     <a href="#" className="flex items-center z-10 relative">
-      <div
+      <img 
+        src="/lovable-uploads/29982f69-e139-482d-a25a-7ff76b3bbdf4.png" 
+        alt="Recpol - Reciclagem de Polímeros" 
         className={cn(
-          "text-3xl font-bold transition-all duration-300",
-          scrolled ? "text-primary" : "text-primary",
+          "h-10 w-auto transition-all duration-300",
+          scrolled ? "h-10" : "h-12",
           "hover:scale-105"
         )}
-      >
-        Contabilify
-      </div>
+      />
     </a>
   );
 };

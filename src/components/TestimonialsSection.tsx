@@ -5,27 +5,27 @@ import AnimatedSection from './AnimatedSection';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      content: "A parceria com a Contabilify trouxe resultados excelentes para nossa empresa. A equipe é atenciosa e nos ajudou a reduzir significativamente nossa carga tributária.",
+      content: "A parceria com a Recpol trouxe resultados excelentes para nossa empresa. A equipe é atenciosa e nos ajudou a otimizar nosso sistema de gerenciamento de resíduos.",
       author: "Carlos Silva",
-      role: "Diretor Financeiro",
+      role: "Diretor Industrial",
       rating: 5
     },
     {
-      content: "Profissionais extremamente competentes e atualizados. Sempre nos mantêm informados sobre mudanças na legislação e nos orientam da melhor forma possível.",
+      content: "Profissionais extremamente competentes e atualizados. Sempre nos mantêm informados sobre mudanças na legislação ambiental e nos orientam da melhor forma possível.",
       author: "Ana Souza",
-      role: "Empresária",
+      role: "Gestora Ambiental",
       rating: 5
     },
     {
-      content: "Desde que contratamos os serviços da Contabilify, temos mais tempo para focar no nosso negócio. A tranquilidade de saber que nossa contabilidade está em boas mãos não tem preço.",
+      content: "Desde que contratamos os serviços da Recpol, temos mais tranquilidade em relação ao descarte adequado dos nossos resíduos industriais. O processo se tornou muito mais eficiente.",
       author: "Marcos Oliveira",
       role: "CEO",
       rating: 5
     },
     {
-      content: "Atendimento personalizado e de qualidade. Os relatórios gerenciais têm sido fundamentais para tomarmos decisões estratégicas em nossa empresa.",
+      content: "Atendimento personalizado e de qualidade. O serviço de coleta e transporte é sempre pontual e segue todas as normas ambientais necessárias.",
       author: "Patricia Mendes",
-      role: "Gerente Administrativa",
+      role: "Gerente de Sustentabilidade",
       rating: 5
     }
   ];
