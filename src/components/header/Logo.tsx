@@ -7,13 +7,13 @@ interface LogoProps {
 
 const Logo = ({ scrolled }: LogoProps) => {
   return (
-    <a href="#" className="flex items-center z-10 relative">
+    <a href="#home" className="flex items-center z-10 relative">
       <img 
-        src="/lovable-uploads/29982f69-e139-482d-a25a-7ff76b3bbdf4.png" 
+        src="/lovable-uploads/808f7fc8-280a-4cfd-b75d-36bc39bdd105.png" 
         alt="Recpol - Reciclagem de Polímeros" 
         className={cn(
-          "h-10 w-auto transition-all duration-300",
-          scrolled ? "h-10" : "h-12",
+          "h-auto w-auto transition-all duration-300",
+          scrolled ? "max-h-10" : "max-h-12",
           "hover:scale-105"
         )}
       />
