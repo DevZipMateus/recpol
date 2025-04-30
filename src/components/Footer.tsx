@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,17 +20,6 @@ const Footer = () => {
               Especializada no gerenciamento, transporte e comercialização de resíduos industriais, 
               com foco na sustentabilidade e no cumprimento das normas ambientais vigentes.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-recpol-green transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-recpol-green transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-recpol-green transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
           
           <div>

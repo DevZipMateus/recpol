@@ -47,63 +47,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Formulário */}
-          <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-            <h3 className="text-xl font-bold mb-6 text-recpol-blue-dark">Envie uma Mensagem</h3>
-            
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
-                  placeholder="Seu nome"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
-                  placeholder="seu.email@exemplo.com"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
-                  placeholder="Assunto da mensagem"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-                <textarea 
-                  id="message" 
-                  rows={4} 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-recpol-blue-dark focus:border-recpol-blue-dark"
-                  placeholder="Digite sua mensagem aqui..."
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full btn-primary"
-              >
-                Enviar Mensagem
-              </button>
-            </form>
-          </div>
-          
+        <div className="mx-auto max-w-4xl">
           {/* Informações de contato */}
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {contactInfo.map((item, index) => (
               <div 
                 key={index} 
@@ -122,19 +68,19 @@ const ContactSection = () => {
                 </div>
               </div>
             ))}
+          </div>
 
-            {/* Mapa */}
-            <div className="bg-white p-1 rounded-xl shadow-md border border-gray-100 overflow-hidden h-[250px]">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8879006386387!2d-46.609726!3d-23.6544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4308e824208d%3A0x4388cba8d1e09b82!2sAv.%20Marginal%20ao%20C%C3%B3rrego%20da%20Serraria%2C%20209%20-%20Concei%C3%A7%C3%A3o%2C%20Diadema%20-%20SP%2C%2009980-390!5e0!3m2!1spt-BR!2sbr!4v1619550000000!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy"
-                title="Localização da Recpol"
-              ></iframe>
-            </div>
+          {/* Mapa */}
+          <div className="bg-white p-1 rounded-xl shadow-md border border-gray-100 overflow-hidden h-[350px] mt-6">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8879006386387!2d-46.609726!3d-23.6544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4308e824208d%3A0x4388cba8d1e09b82!2sAv.%20Marginal%20ao%20C%C3%B3rrego%20da%20Serraria%2C%20209%20-%20Concei%C3%A7%C3%A3o%2C%20Diadema%20-%20SP%2C%2009980-390!5e0!3m2!1spt-BR!2sbr!4v1619550000000!5m2!1spt-BR!2sbr" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy"
+              title="Localização da Recpol"
+            ></iframe>
           </div>
         </div>
       </div>
