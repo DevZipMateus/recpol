@@ -55,10 +55,10 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -top-12 -left-8 w-64 h-64 bg-recpol-green/10 rounded-full filter blur-xl"></div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-recpol-blue-light/20 rounded-full filter blur-xl"></div>
-              <div className="relative z-10 bg-white shadow-xl rounded-2xl p-1 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl overflow-hidden">
+              <div className="relative z-10 bg-white shadow-xl rounded-2xl p-8 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1611284446314-60a58ac0dae9?q=80&w=1170&auto=format&fit=crop" 
-                  alt="Reciclagem de Polímeros" 
+                  src="/lovable-uploads/29982f69-e139-482d-a25a-7ff76b3bbdf4.png" 
+                  alt="Recpol - Reciclagem de Polímeros" 
                   className="rounded-2xl w-full h-auto object-cover"
                   loading="lazy"
                 />
