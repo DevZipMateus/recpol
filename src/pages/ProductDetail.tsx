@@ -132,9 +132,9 @@ const products = [
     properties: ['Bom acabamento superficial', 'Rigidez', 'Facilidade de processamento']
   },
   {
-    id: "pp-talco",
+    id: "pp",
     name: 'PP',
-    fullName: 'Polipropileno',
+    fullName: 'Polipropileno-PP',
     description: 'Polipropileno, proporcionando maior rigidez e estabilidade dimensional.',
     images: [
       '/lovable-uploads/2ddca795-f533-495a-ba58-003db4801f76.png',
