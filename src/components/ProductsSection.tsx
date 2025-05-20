@@ -23,7 +23,7 @@ const ProductsSection = () => {
     image: '/lovable-uploads/ABS.jpg'
   }, {
     id: "pp-talco",
-    name: 'PP com Talco',
+    name: 'PP',
     description: 'Polipropileno reforçado com talco, proporcionando maior rigidez e estabilidade dimensional.',
     image: '/lovable-uploads/2ddca795-f533-495a-ba58-003db4801f76.png'
   }];
