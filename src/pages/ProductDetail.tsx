@@ -6,6 +6,21 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { useEffect } from 'react';
+import { 
+  Table, 
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 // Product database
 const products = [
@@ -115,6 +130,34 @@ const products = [
     conclusion: 'O ABS é uma excelente opção para quem busca um material com alta resistência ao impacto, facilidade de processamento e versatilidade em diversas aplicações, oferecendo excelente custo-benefício e durabilidade.',
     applications: ['Carcaças de equipamentos', 'Peças de automóveis', 'Componentes eletrônicos'],
     properties: ['Bom acabamento superficial', 'Rigidez', 'Facilidade de processamento']
+  },
+  {
+    id: "pp-talco",
+    name: 'PP com Talco',
+    fullName: 'Polipropileno com Talco',
+    description: 'Polipropileno reforçado com talco, proporcionando maior rigidez e estabilidade dimensional.',
+    images: [
+      '/lovable-uploads/2ddca795-f533-495a-ba58-003db4801f76.png',
+      '/lovable-uploads/ce195b50-b854-494c-9f06-e4c46be9c0d3.png'
+    ],
+    image: '/lovable-uploads/2ddca795-f533-495a-ba58-003db4801f76.png',
+    detailedDescription: 'Recpol Polímeros, empresa brasileira dedicando-se à comercialização de plásticos produz compostos e blendas que são usados nas industrias em processamento desenvolvimento poliméricos de engenharia a partir das resinas. Atualmente a Recpol polímeros conta com laboratório de controle e somos uma empresa certificadora pela norma ISO 9001:2015 e ISO 14001:2015, compreendida em oferecer produtos com o mais alto padrão de qualidade e meio ambiente.',
+    introduction: 'A partir das resinas bases de Polipropileno PP com talco',
+    aboutOrigin: 'A origem polipropileno com talco (PP) sua baixa rigidez, alta contração e baixa resistência térmica, aplicação técnicas e industriais.',
+    hasPropertyTable: true,
+    propertyTable: [
+      { property: 'Rigidez (módulo de elasticidade)', description: 'Alta rigidez devido à presença de partículas minerais' },
+      { property: 'Estabilidade dimensional', description: 'Excelente, com baixa contração e menor empenamento' },
+      { property: 'Resistência térmica (HDT)', description: 'Elevada, suporta temperaturas maiores sem deformação' },
+      { property: 'Resistência ao impacto', description: 'Reduzida (pode ser ajustada com aditivos específicos, se necessário)' },
+      { property: 'Densidade', description: 'Moderada a alta, variando conforme o teor de talco (geralmente 1,1-1,3 g/cm³)' },
+      { property: 'Acabamento superficial', description: 'Opaco e fosco, com textura mais áspera que o PP puro' },
+      { property: 'Processabilidade', description: 'Boa, mas pode exigir ajustes em parâmetros de injeção' },
+      { property: 'Resistência à abrasão', description: 'Boa, adequada para aplicação com contato mecânico leve' }
+    ],
+    conclusion: 'O Polipropileno com Talco é uma excelente opção para aplicações técnicas e industriais que necessitam de maior rigidez e estabilidade dimensional.',
+    applications: ['Peças automotivas', 'Componentes industriais', 'Eletrodomésticos'],
+    properties: ['Alta rigidez', 'Excelente estabilidade dimensional', 'Boa resistência térmica']
   }
 ];
 
@@ -162,13 +205,35 @@ const ProductDetail = () => {
             </Link>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="bg-white rounded-xl overflow-hidden shadow-md">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+              {product.images ? (
+                <div className="bg-white rounded-xl overflow-hidden shadow-md">
+                  <Carousel className="w-full">
+                    <CarouselContent>
+                      {product.images.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <div className="p-1">
+                            <img 
+                              src={image} 
+                              alt={`${product.name} - Imagem ${index + 1}`} 
+                              className="w-full h-auto object-cover rounded-lg"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
+                </div>
+              ) : (
+                <div className="bg-white rounded-xl overflow-hidden shadow-md">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              )}
               
               <div>
                 <h1 className="text-3xl sm:text-4xl font-bold mb-2">{product.fullName}</h1>
@@ -179,6 +244,42 @@ const ProductDetail = () => {
                     <h2 className="text-xl font-semibold mb-3">Descrição</h2>
                     <p className="text-gray-700">{product.detailedDescription}</p>
                   </div>
+                  
+                  {product.introduction && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Introdução</h2>
+                      <p className="text-gray-700">{product.introduction}</p>
+                    </div>
+                  )}
+                  
+                  {product.aboutOrigin && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Origem</h2>
+                      <p className="text-gray-700">{product.aboutOrigin}</p>
+                    </div>
+                  )}
+                  
+                  {product.hasPropertyTable && product.propertyTable && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-3">Propriedades principais</h2>
+                      <Table className="border rounded-lg">
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-1/3 bg-gray-100">Propriedade</TableHead>
+                            <TableHead className="bg-gray-100">Descrição</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {product.propertyTable.map((prop, index) => (
+                            <TableRow key={index} className="hover:bg-gray-50">
+                              <TableCell className="font-medium border-r">{prop.property}</TableCell>
+                              <TableCell>{prop.description}</TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </div>
+                  )}
                   
                   {product.characteristics && (
                     <div>
@@ -224,7 +325,7 @@ const ProductDetail = () => {
                     </div>
                   )}
                   
-                  {product.properties && (
+                  {product.properties && !product.hasPropertyTable && (
                     <div>
                       <h2 className="text-xl font-semibold mb-3">Propriedades</h2>
                       <ul className="list-disc pl-5 text-gray-700">

@@ -1,3 +1,4 @@
+
 import ProductCard from './cards/ProductCard';
 const ProductsSection = () => {
   const products = [{
@@ -20,6 +21,11 @@ const ProductsSection = () => {
     name: 'ABS',
     description: 'Acrilonitrila Butadieno Estireno, conhecido por sua resistência e rigidez.',
     image: '/lovable-uploads/ABS.jpg'
+  }, {
+    id: "pp-talco",
+    name: 'PP com Talco',
+    description: 'Polipropileno reforçado com talco, proporcionando maior rigidez e estabilidade dimensional.',
+    image: '/lovable-uploads/2ddca795-f533-495a-ba58-003db4801f76.png'
   }];
   return <section id="produtos" aria-labelledby="products-heading" className="bg-white py-0">
       <div className="section-container">
