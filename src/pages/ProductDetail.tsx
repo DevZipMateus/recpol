@@ -133,9 +133,9 @@ const products = [
   },
   {
     id: "pp-talco",
-    name: 'PP com Talco',
-    fullName: 'Polipropileno com Talco',
-    description: 'Polipropileno reforçado com talco, proporcionando maior rigidez e estabilidade dimensional.',
+    name: 'PP',
+    fullName: 'Polipropileno',
+    description: 'Polipropileno, proporcionando maior rigidez e estabilidade dimensional.',
     images: [
       '/lovable-uploads/2ddca795-f533-495a-ba58-003db4801f76.png',
       '/lovable-uploads/ce195b50-b854-494c-9f06-e4c46be9c0d3.png'
