@@ -24,12 +24,29 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="w-full">
             <video 
-              className="w-full h-auto rounded-2xl shadow-xl"
+              className="w-full h-auto rounded-2xl shadow-xl max-w-full"
               controls
               preload="metadata"
+              playsInline
+              muted
+              webkit-playsinline="true"
+              style={{ maxHeight: '70vh' }}
+              onError={(e) => {
+                console.log('Erro ao carregar vídeo:', e);
+                e.currentTarget.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.innerHTML = '<p class="text-center text-gray-500 p-8 border-2 border-dashed border-gray-300 rounded-2xl">Vídeo não disponível no momento. Entre em contato conosco para mais informações.</p>';
+                e.currentTarget.parentNode?.appendChild(fallback);
+              }}
             >
               <source src="/lovable-uploads/1040064274377047.mp4" type="video/mp4" />
-              Seu navegador não suporta a reprodução de vídeo.
+              <p className="text-center text-gray-500 p-8 border-2 border-dashed border-gray-300 rounded-2xl">
+                Seu navegador não suporta a reprodução de vídeo. 
+                <br />
+                <a href="/lovable-uploads/1040064274377047.mp4" className="text-recpol-blue-dark underline" target="_blank" rel="noopener noreferrer">
+                  Clique aqui para baixar o vídeo
+                </a>
+              </p>
             </video>
           </div>
           
