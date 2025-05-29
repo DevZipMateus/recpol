@@ -1,4 +1,3 @@
-
 import { CheckCircle } from 'lucide-react';
 
 const AboutSection = () => {
@@ -22,23 +21,16 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative aspect-video bg-gray-100">
-                <video 
-                  className="w-full h-full object-contain"
-                  controls
-                  preload="metadata"
-                  poster="/lovable-uploads/eac15d20-e636-45f9-ac23-37b89fe622a4.jpg"
-                >
-                  <source src="/lovable-uploads/1040064274377047.mp4" type="video/mp4" />
-                  Seu navegador não suporta a reprodução de vídeo.
-                </video>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-recpol-blue-light/10 rounded-full z-0"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-recpol-green/10 rounded-full z-0"></div>
+          <div className="w-full">
+            <video 
+              className="w-full h-auto rounded-2xl shadow-xl"
+              controls
+              preload="metadata"
+              poster="/lovable-uploads/eac15d20-e636-45f9-ac23-37b89fe622a4.jpg"
+            >
+              <source src="/lovable-uploads/1040064274377047.mp4" type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
           </div>
           
           <div className="space-y-6">
