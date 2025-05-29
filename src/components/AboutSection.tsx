@@ -21,6 +21,29 @@ const AboutSection = () => {
           </p>
         </div>
 
+        {/* Seção do vídeo de apresentação */}
+        <div className="mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">Apresentação da Empresa</h3>
+              <p className="text-gray-600">
+                Assista nossa apresentação institucional com nossa assistente virtual
+              </p>
+            </div>
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+              <video 
+                className="w-full h-full object-cover"
+                controls
+                preload="metadata"
+                poster="/lovable-uploads/eac15d20-e636-45f9-ac23-37b89fe622a4.jpg"
+              >
+                <source src="/lovable-uploads/1040064274377047.mp4" type="video/mp4" />
+                Seu navegador não suporta a reprodução de vídeo.
+              </video>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
