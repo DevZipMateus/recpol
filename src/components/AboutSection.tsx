@@ -1,3 +1,4 @@
+
 import { CheckCircle } from 'lucide-react';
 
 const AboutSection = () => {
@@ -26,7 +27,6 @@ const AboutSection = () => {
               className="w-full h-auto rounded-2xl shadow-xl"
               controls
               preload="metadata"
-              poster="/lovable-uploads/eac15d20-e636-45f9-ac23-37b89fe622a4.jpg"
             >
               <source src="/lovable-uploads/1040064274377047.mp4" type="video/mp4" />
               Seu navegador não suporta a reprodução de vídeo.
