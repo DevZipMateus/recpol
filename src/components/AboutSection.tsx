@@ -32,7 +32,7 @@ const AboutSection = () => {
             </div>
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl bg-gray-100">
               <video 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 controls
                 preload="metadata"
                 poster="/lovable-uploads/eac15d20-e636-45f9-ac23-37b89fe622a4.jpg"
