@@ -8,7 +8,8 @@ const ServicesSection = () => {
     {
       icon: Recycle,
       title: 'Gerenciamento de Resíduos',
-      description: 'Planejamento e gestão, classificação e caracterização, mão de obra especializada, coleta seletiva, locação de equipamentos.'
+      description: 'Planejamento e gestão, classificação e caracterização, mão de obra especializada, coleta seletiva, locação de equipamentos. Relatórios e certificados de destinação de resíduos direto da CETESB enviados para o cliente.',
+      showCetesbLogo: true
     },
     {
       icon: Truck,
@@ -49,12 +50,22 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
+            <div key={index} className="relative">
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+              />
+              {service.showCetesbLogo && (
+                <div className="absolute top-4 right-4">
+                  <img 
+                    src="/lovable-uploads/d2b82fa7-b146-4615-b748-3e02ab210935.png" 
+                    alt="Logo CETESB" 
+                    className="w-16 h-auto opacity-90"
+                  />
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
