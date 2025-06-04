@@ -14,7 +14,9 @@ const Fleet = () => {
     "/lovable-uploads/1234124811659090.jpeg",
     "/lovable-uploads/1355489138994886.jpeg",
     "/lovable-uploads/1246277130401803.jpeg",
-    "/lovable-uploads/1207847374351891.jpeg"
+    "/lovable-uploads/1207847374351891.jpeg",
+    "/lovable-uploads/728818679567855.jpeg",
+    "/lovable-uploads/678622931724642.jpeg"
   ];
 
   return (
@@ -51,11 +53,31 @@ const Fleet = () => {
               </div>
               <div className="lg:w-1/2">
                 <div className="relative">
-                  <img 
-                    src={images[0]} 
-                    alt="Frota Recpol" 
-                    className="rounded-lg shadow-lg w-full h-auto object-cover"
-                  />
+                  <video 
+                    className="w-full h-auto rounded-lg shadow-lg max-w-full object-cover"
+                    controls
+                    preload="metadata"
+                    playsInline
+                    muted
+                    webkit-playsinline="true"
+                    style={{ maxHeight: '70vh' }}
+                    onError={(e) => {
+                      console.log('Erro ao carregar vídeo:', e);
+                      e.currentTarget.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.innerHTML = '<p class="text-center text-gray-500 p-8 border-2 border-dashed border-gray-300 rounded-lg">Vídeo não disponível no momento. Entre em contato conosco para mais informações.</p>';
+                      e.currentTarget.parentNode?.appendChild(fallback);
+                    }}
+                  >
+                    <source src="/lovable-uploads/1859112114662338.mp4" type="video/mp4" />
+                    <p className="text-center text-gray-500 p-8 border-2 border-dashed border-gray-300 rounded-lg">
+                      Seu navegador não suporta a reprodução de vídeo. 
+                      <br />
+                      <a href="/lovable-uploads/1859112114662338.mp4" className="text-recpol-blue-dark underline" target="_blank" rel="noopener noreferrer">
+                        Clique aqui para baixar o vídeo
+                      </a>
+                    </p>
+                  </video>
                   <div className="absolute -bottom-4 -right-4 bg-recpol-blue-dark text-white p-4 rounded-lg shadow-lg">
                     <Truck className="h-8 w-8" />
                   </div>
@@ -74,7 +96,7 @@ const Fleet = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {images.slice(1).map((img, index) => (
+              {images.map((img, index) => (
                 <div 
                   key={index} 
                   className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
