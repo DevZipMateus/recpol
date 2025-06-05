@@ -1,5 +1,4 @@
-
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,6 +19,37 @@ const Footer = () => {
               Especializada no gerenciamento, transporte e comercialização de resíduos industriais, 
               com foco na sustentabilidade e no cumprimento das normas ambientais vigentes.
             </p>
+            
+            {/* Redes Sociais */}
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61576933028534" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-recpol-green flex items-center justify-center hover:bg-recpol-green/80 transition-colors"
+                aria-label="Facebook da Recpol"
+              >
+                <Facebook className="h-5 w-5 text-white" />
+              </a>
+              <a 
+                href="https://www.instagram.com/recpol_?igsh=MXQybXk2dm93NG92OQ==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-recpol-green flex items-center justify-center hover:bg-recpol-green/80 transition-colors"
+                aria-label="Instagram da Recpol"
+              >
+                <Instagram className="h-5 w-5 text-white" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/recpol-termoplaticos-9a2430369/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-recpol-green flex items-center justify-center hover:bg-recpol-green/80 transition-colors"
+                aria-label="LinkedIn da Recpol"
+              >
+                <Linkedin className="h-5 w-5 text-white" />
+              </a>
+            </div>
           </div>
           
           <div>
