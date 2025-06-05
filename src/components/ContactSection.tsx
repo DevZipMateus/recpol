@@ -8,7 +8,6 @@ const ContactSection = () => {
       icon: Phone,
       title: 'Telefone',
       details: [
-        '(11) 4055-1340',
         '(11) 94744-2886 (WhatsApp)'
       ]
     },

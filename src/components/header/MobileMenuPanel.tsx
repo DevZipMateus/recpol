@@ -100,13 +100,6 @@ const MobileMenuPanel = ({ isMenuOpen, onClose, menuItems }: MobileMenuPanelProp
             <p className="text-sm text-gray-500 mb-4 font-medium">Entre em contato conosco</p>
             <div className="space-y-3">
               <a 
-                href="tel:+551140551340" 
-                className="text-base text-recpol-blue-dark hover:text-recpol-green font-medium block py-2
-                           transition-all duration-200 hover:translate-x-1 hover:scale-[1.02] flex items-center"
-              >
-                📞 (11) 4055-1340
-              </a>
-              <a 
                 href="https://wa.me/5511947442886" 
                 className="text-base text-recpol-blue-dark hover:text-recpol-green font-medium block py-2
                            transition-all duration-200 hover:translate-x-1 hover:scale-[1.02] flex items-center"
