@@ -1,4 +1,5 @@
 
+
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -57,7 +58,7 @@ const Footer = () => {
                 aria-label="LinkedIn da Recpol"
               >
                 <img 
-                  src="/lovable-uploads/442b8fc4-5806-4205-a2c0-e013d3eb3d9c.png" 
+                  src="/lovable-uploads/29cbb9ee-1a28-4209-a8cb-ae029e9ae421.png" 
                   alt="LinkedIn"
                   className="w-full h-full object-cover"
                 />
@@ -130,3 +131,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
