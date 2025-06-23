@@ -1,5 +1,11 @@
 
+
 import { cn } from '@/lib/utils';
+
+// Declaração de tipo para gtag
+declare global {
+  function gtag(command: string, targetId: string, config?: any): void;
+}
 
 // Função para disparar evento de conversão e depois abrir o WhatsApp
 const gtagSendEvent = (url: string) => {
@@ -9,7 +15,6 @@ const gtagSendEvent = (url: string) => {
     }
   };
   
-  // @ts-ignore - gtag is loaded from external script
   if (typeof gtag !== 'undefined') {
     gtag('event', 'conversion_event_contact_1', {
       'event_callback': callback,
@@ -53,3 +58,4 @@ const WhatsAppButton = () => {
 };
 
 export default WhatsAppButton;
+
