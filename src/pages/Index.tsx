@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
+import QualityPolicySection from '@/components/QualityPolicySection';
 import NylonCarousel from '@/components/NylonCarousel';
 import ProductsSection from '@/components/ProductsSection';
 import ContactSection from '@/components/ContactSection';
@@ -47,6 +48,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
+        <QualityPolicySection />
         <NylonCarousel />
         <ProductsSection />
         <ContactSection />
