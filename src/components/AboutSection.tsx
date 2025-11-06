@@ -61,7 +61,7 @@ const AboutSection = () => {
             
             <div className="space-y-4">
               <div className="flex gap-3">
-                <span className="text-recpol-blue-dark font-bold">•</span>
+                <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-700">
                     Satisfazer os clientes e partes interessadas, buscando soluções diferenciadas;{' '}
@@ -71,7 +71,7 @@ const AboutSection = () => {
               </div>
               
               <div className="flex gap-3">
-                <span className="text-recpol-blue-dark font-bold">•</span>
+                <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-700">
                     Gerenciar nossas atividades e processos, buscando sempre a melhoria contínua;{' '}
@@ -81,7 +81,7 @@ const AboutSection = () => {
               </div>
               
               <div className="flex gap-3">
-                <span className="text-recpol-blue-dark font-bold">•</span>
+                <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-700">
                     Atuar na preservação do meio ambiente e do seu principal aspecto ambiental, consumo de energia;{' '}
@@ -91,7 +91,7 @@ const AboutSection = () => {
               </div>
               
               <div className="flex gap-3">
-                <span className="text-recpol-blue-dark font-bold">•</span>
+                <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-700">
                     Prevenir a poluição e outros compromissos específicos;{' '}
@@ -101,7 +101,7 @@ const AboutSection = () => {
               </div>
               
               <div className="flex gap-3">
-                <span className="text-recpol-blue-dark font-bold">*</span>
+                <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-700">
                     Realizar nossas atividades em obediência à legislação e outros requisitos aplicáveis.{' '}
