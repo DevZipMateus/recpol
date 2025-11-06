@@ -55,35 +55,61 @@ const AboutSection = () => {
               Nossa Política
             </span>
             <h3 className="text-3xl font-bold">POLÍTICA DE QUALIDADE E MEIO AMBIENTE</h3>
-            <p className="text-gray-700">
-              A RECPOL é uma empresa de reciclagem de polímeros situada no Estado de São Paulo, 
-              com forte presença no mercado nacional. Com um compromisso firme com a qualidade e a 
-              sustentabilidade, buscamos sempre a excelência em nossas operações, alinhando inovação, 
-              responsabilidade e respeito ao meio ambiente.
-            </p>
-            <p className="text-gray-700">
-              Nossa missão é oferecer soluções diferenciadas que atendam às necessidades de nossos clientes 
-              e partes interessadas, com foco na melhoria contínua de nossos processos e na preservação 
-              ambiental. Acreditamos que, ao promover práticas sustentáveis e adotar medidas de eficiência 
-              energética, podemos contribuir de maneira significativa para um futuro mais sustentável.
+            <p className="text-gray-700 mb-6">
+              A RECPOL, empresa de reciclagem de polímeros, situada no Estado de São Paulo, com ampla atuação no mercado nacional, acredita que o compromisso com a Qualidade e Meio Ambiente leva à excelência em suas atividades, comprometendo-se a:
             </p>
             
-            <div className="mt-6">
-              <h4 className="text-lg font-bold mb-3">Compromissos da RECPOL:</h4>
-              <div className="grid grid-cols-1 gap-3 pt-2">
-                {features.map(feature => (
-                  <div key={feature} className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-recpol-green flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
-                  </div>
-                ))}
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <span className="text-recpol-blue-dark font-bold">•</span>
+                <div>
+                  <p className="text-gray-700">
+                    Satisfazer os clientes e partes interessadas, buscando soluções diferenciadas;{' '}
+                    <span className="text-gray-600 italic">(manter os clientes satisfeitos)</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <span className="text-recpol-blue-dark font-bold">•</span>
+                <div>
+                  <p className="text-gray-700">
+                    Gerenciar nossas atividades e processos, buscando sempre a melhoria contínua;{' '}
+                    <span className="text-gray-600 italic">(Qualidade da produção)</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <span className="text-recpol-blue-dark font-bold">•</span>
+                <div>
+                  <p className="text-gray-700">
+                    Atuar na preservação do meio ambiente e do seu principal aspecto ambiental, consumo de energia;{' '}
+                    <span className="text-gray-600 italic">(Reduzir consumo de Energia elétrica e Água) / (Aumentar o tempo de vida útil dos aterros)</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <span className="text-recpol-blue-dark font-bold">•</span>
+                <div>
+                  <p className="text-gray-700">
+                    Prevenir a poluição e outros compromissos específicos;{' '}
+                    <span className="text-gray-600 italic">(reduzir emissão de fumaça preta dos veículos)</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <span className="text-recpol-blue-dark font-bold">*</span>
+                <div>
+                  <p className="text-gray-700">
+                    Realizar nossas atividades em obediência à legislação e outros requisitos aplicáveis.{' '}
+                    <span className="text-gray-600 italic">(atender aos requisitos legais e outros requisitos aplicáveis)</span>
+                  </p>
+                </div>
               </div>
             </div>
-            
-            <p className="text-gray-700 mt-4">
-              Na RECPOL, entendemos que a chave para o sucesso está em aliar qualidade e responsabilidade 
-              ambiental, criando soluções que contribuem para um futuro mais limpo e eficiente.
-            </p>
             
             <a href="#servicos" className="btn-primary inline-block mt-4">
               Conheça Nossos Serviços
