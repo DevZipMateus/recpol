@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
@@ -9,16 +10,20 @@ import ProductsSection from '@/components/ProductsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+
 const Index = () => {
   useEffect(() => {
     // Implementação de rolagem suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        
         const targetId = this.getAttribute('href')?.substring(1);
         if (!targetId) return;
+        
         const targetElement = document.getElementById(targetId);
         if (!targetElement) return;
+
         window.scrollTo({
           top: targetElement.offsetTop - 70,
           behavior: 'smooth'
@@ -35,19 +40,23 @@ const Index = () => {
       });
     };
   }, []);
-  return <div className="flex flex-col min-h-screen">
+
+  return (
+    <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        
+        <QualityPolicySection />
         <NylonCarousel />
         <ProductsSection />
         <ContactSection />
       </main>
       <Footer />
       <WhatsAppButton />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
